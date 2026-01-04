@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Edu2Job | Job Prediction</title>
+</head>
+<body class="bg-slate-50 flex min-h-screen">
+    <aside class="w-64 bg-indigo-900 text-white p-6 sticky top-0 h-screen">
+        <div class="text-2xl font-black italic mb-10">Edu2Job</div>
+        <nav class="space-y-4">
+            <a href="dashboard.html" class="block p-3 hover:bg-indigo-800 rounded-xl">🏠 Dashboard</a>
+            <a href="job-prediction.html" class="block p-3 bg-indigo-800 rounded-xl font-bold">🚀 Job Prediction</a>
+        </nav>
+    </aside>
+
+    <main class="flex-1 p-10">
+        <h1 class="text-3xl font-black text-slate-800 mb-8">AI Job Predictor</h1>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div class="bg-white p-8 rounded-3xl shadow-sm border">
+                <h3 class="text-indigo-900 font-black mb-6 uppercase text-sm tracking-widest">Resume Analysis</h3>
+                <p class="text-slate-500 mb-6 text-sm">Upload your PDF resume to see which careers from our dataset match your skills.</p>
+                <input type="file" id="resumeUpload" accept=".pdf" class="mb-6 block w-full text-sm text-slate-500">
+                <button onclick="predictJobs()" id="predictBtn" class="w-full bg-indigo-600 text-white py-4 rounded-xl font-bold shadow-lg hover:bg-indigo-700 transition">
+                    Analyze & Save
+                </button>
+            </div>
+            <div class="bg-white p-8 rounded-3xl shadow-sm border">
+                <h3 class="text-indigo-900 font-black mb-6 uppercase text-sm tracking-widest">Top Matches</h3>
+                <div id="jobResults" class="space-y-3 italic text-slate-400">Awaiting upload...</div>
+            </div>
+        </div>
+    </main>
+    <script type="module" src="app.js"></script>
+</body>
+</html>

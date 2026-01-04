@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Admin • Feedbacks</title>
+    <style>
+        /* Professional dashboard background with subtle dark overlay */
+        body {
+            background-image: linear-gradient(rgba(6,10,15,0.55), rgba(6,10,15,0.55)),
+                url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            min-height: 100vh;
+        }
+        nav.admin-nav { background-color: rgba(255,255,255,0.9); backdrop-filter: blur(6px); }
+        main.admin-main { background-color: rgba(255,255,255,0.94); }
+    </style>
+</head>
+
+<body class="font-sans">
+    <nav class="flex justify-between px-10 py-6 shadow-sm admin-nav">
+        <div class="text-2xl font-black text-indigo-900 italic">Edu2Job</div>
+        <div class="space-x-6">
+            <a href="index.html" class="font-bold text-slate-600 hover:text-indigo-600 transition">Home</a>
+            <a href="feedback.html" class="font-bold text-slate-600 hover:text-indigo-600 transition">Feedback</a>
+            <a href="login.html" class="font-bold text-slate-600 hover:text-indigo-600 transition">Login</a>
+        </div>
+    </nav>
+
+    <main class="max-w-5xl mx-auto mt-12 p-6 rounded-lg shadow admin-main">
+        <h1 class="text-2xl font-extrabold text-slate-900 mb-4">Feedback Submissions</h1>
+        <p class="text-slate-500 mb-6">Below are messages submitted by users.</p>
+
+        <div id="feedback-container">
+            <div id="feedback-table" class="text-sm"></div>
+        </div>
+    </main>
+
+    <script type="module" src="app.js"></script>
+</body>
+
+</html>

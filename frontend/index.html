@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Library background with subtle dark overlay for readability */
+        body {
+            background-image: linear-gradient(rgba(6,10,15,0.55), rgba(6,10,15,0.55)),
+                url('https://t4.ftcdn.net/jpg/09/02/53/81/360_F_902538150_JCEcejSQkRHHR7d5jE1nbmfhXHdcd9E3.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            min-height: 100vh;
+        }
+        /* Make primary header text pop on the image */
+        header h1 { text-shadow: 0 6px 18px rgba(2,6,23,0.6); }
+        /* Semi-transparent nav for contrast while keeping background visible */
+        nav.custom-nav { background-color: rgba(255,255,255,0.85); backdrop-filter: blur(6px); }
+    </style>
+</head>
+
+<body class="font-sans">
+    <nav class="flex justify-between px-10 py-6 shadow-sm custom-nav">
+        <div class="text-2xl font-black text-indigo-900 italic">Edu2Job</div>
+        <div class="space-x-6">
+            <a href="login.html" class="font-bold text-slate-600 hover:text-indigo-600 transition">Login</a>
+            <a href="feedback.html" class="font-bold text-slate-600 hover:text-indigo-600 transition">Feedback</a>
+            <a href="admin.html" class="font-bold text-slate-600 hover:text-indigo-600 transition">Admin</a>
+            <a href="signup.html"
+                class="bg-indigo-600 text-white px-6 py-2 rounded-full font-bold shadow-md hover:bg-indigo-700 transition">Create
+                Account</a>
+        </div>
+    </nav>
+    <header class="py-20">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col lg:flex-row items-center gap-12">
+            <div class="lg:w-1/2 text-center lg:text-left">
+                <h1 class="text-6xl font-black text-white mb-6">Your AI-Powered Career Path</h1>
+                <p class="text-indigo-100 text-lg mb-6">Real-time job predictions based on your student profile.</p>
+                <div class="flex lg:justify-start justify-center mt-6">
+                    <a href="signup.html" class="px-10 py-4 bg-indigo-600 text-white rounded-2xl font-bold shadow-xl">Get
+                        Started Free</a>
+                </div>
+            </div>
+            <div class="lg:w-1/2 flex justify-center">
+               
+            </div>
+        </div>
+    </header>
+    <script type="module" src="app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edu2Job - Login</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Bookshelf background with subtle dark overlay */
+        body {
+            background-image: linear-gradient(rgba(6,8,15,0.55), rgba(6,8,15,0.55)),
+                url('https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            min-height: 100vh;
+        }
+        /* Make the login card slightly translucent so background shows softly */
+        .login-card { background-color: rgba(255,255,255,0.92); }
+        nav.login-nav { background-color: rgba(255,255,255,0.9); backdrop-filter: blur(6px); }
+    </style>
+</head>
+<body class="flex items-center justify-center h-screen">
+    
+    <div class="login-card p-10 rounded-3xl shadow-2xl w-full max-w-md">
+        <h2 class="text-3xl font-black text-indigo-900 mb-2">Welcome Back</h2>
+        <p class="text-slate-400 mb-8">Enter your credentials to access your dashboard.</p>
+        
+        <form class="space-y-4">
+            <div>
+                <label class="text-xs font-bold text-slate-400 uppercase ml-1">Email Address</label>
+                <input type="email" id="email" placeholder="name@example.com"
+                    class="w-full p-4 border-2 border-slate-100 rounded-xl outline-none focus:border-indigo-600 transition-all" required>
+            </div>
+
+            <div>
+                <label class="text-xs font-bold text-slate-400 uppercase ml-1">Password</label>
+                <input type="password" id="password" placeholder="••••••••"
+                    class="w-full p-4 border-2 border-slate-100 rounded-xl outline-none focus:border-indigo-600 transition-all" required>
+            </div>
+
+            <button type="button" onclick="loginUser(event)" class="w-full bg-indigo-600 text-white py-4 rounded-xl font-bold shadow-lg hover:bg-indigo-700 transition-transform active:scale-95">
+                Sign In
+            </button>
+        </form>
+
+        <div class="flex items-center my-6">
+            <div class="flex-1 border-t border-slate-100"></div>
+            <span class="px-3 text-slate-400 text-sm font-medium uppercase tracking-widest">or</span>
+            <div class="flex-1 border-t border-slate-100"></div>
+        </div>
+
+        <button onclick="googleLogin()" class="w-full border-2 border-slate-100 py-4 rounded-xl font-bold flex items-center justify-center gap-3 hover:bg-slate-50 transition-colors">
+            <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" width="20" alt="Google icon">
+            Login with Google
+        </button>
+
+        <p class="mt-8 text-center text-slate-500 text-sm">
+            New user? <a href="signup.html" class="text-indigo-600 font-bold underline hover:text-indigo-800 transition-colors">Create an account</a>
+        </p>
+    </div>
+
+    <script type="module" src="app.js"></script>
+</body>
+</html>

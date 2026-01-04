@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Feedback • Edu2Job</title>
+    <style>
+        /* Soft study/feedback background with dark overlay for readability */
+        body {
+            background-image: linear-gradient(rgba(4,8,15,0.55), rgba(4,8,15,0.55)),
+                url('https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            min-height: 100vh;
+        }
+        nav.feedback-nav { background-color: rgba(255,255,255,0.9); backdrop-filter: blur(6px); }
+        main { background-color: rgba(255,255,255,0.92); }
+    </style>
+</head>
+
+    <body class="font-sans">
+    <nav class="flex justify-between px-10 py-6 shadow-sm feedback-nav">
+        <div class="text-2xl font-black text-indigo-900 italic">Edu2Job</div>
+        <div class="space-x-6">
+            <a href="index.html" class="font-bold text-slate-600 hover:text-indigo-600 transition">Home</a>
+            <a href="login.html" class="font-bold text-slate-600 hover:text-indigo-600 transition">Login</a>
+            <a href="signup.html"
+                class="bg-indigo-600 text-white px-4 py-2 rounded-full font-bold shadow-md hover:bg-indigo-700 transition">Create
+                Account</a>
+        </div>
+    </nav>
+
+    <main class="max-w-2xl mx-auto mt-20 p-8 rounded-lg shadow bg-black-500">
+        <h1 class="text-3xl font-extrabold text-slate-900 mb-4">Send Us Feedback</h1>
+        <p class="text-slate-500 mb-6">Help us improve — share bugs, ideas, or general feedback.</p>
+
+        <form id="feedback-form" onsubmit="submitFeedback(event)" class="space-y-4 ">
+            <div>
+                <label class="block font-bold mb-1">Name</label>
+                <input id="fb-name" required class="w-full border px-3 py-2 rounded" />
+            </div>
+            <div>
+                <label class="block font-bold mb-1">Email</label>
+                <input id="fb-email" type="email" required class="w-full border px-3 py-2 rounded" />
+            </div>
+            <div>
+                <label class="block font-bold mb-1">Message</label>
+                <textarea id="fb-message" rows="6" required class="w-full border px-3 py-2 rounded"></textarea>
+            </div>
+            <div class="flex justify-end">
+                <button type="submit" class="bg-indigo-600 text-white px-6 py-2 rounded font-bold">Send Feedback</button>
+            </div>
+        </form>
+    </main>
+
+    <script type="module" src="app.js"></script>
+</body>
+
+</html>
